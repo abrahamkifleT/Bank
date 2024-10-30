@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/abrahamkifleT/Bank/fileops"
+	"github.com/dustin/go-humanize"
 )
 
 const accountBlanceFile = "balance.txt"
@@ -29,7 +30,8 @@ func main() {
 
 		switch choice {
 		case 1:
-			fmt.Println("Your balance is: ", accountBalance)
+			formatAccountBalance := humanize.Commaf(accountBalance)
+			fmt.Println("Your balance is: ", formatAccountBalance)
 		case 2:
 			fmt.Print("Your deposit: ")
 			var depositeAmount float64
