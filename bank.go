@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/Pallinder/go-randomdata"
 	"github.com/abrahamkifleT/Bank/fileops"
 	"github.com/dustin/go-humanize"
 )
@@ -10,8 +11,6 @@ import (
 const accountBlanceFile = "balance.txt"
 
 func main() {
-
-	fmt.Println("Welcome to Go Bank!")
 	var accountBalance, err = fileops.GetFloatFromFile(accountBlanceFile)
 	if err != nil {
 		fmt.Println("ERROR")
@@ -19,6 +18,9 @@ func main() {
 		fmt.Println("--------")
 		//panic("can't continue, sorry.")
 	}
+
+	fmt.Println("Welcome to Go Bank!")
+	fmt.Println("Reach us 24/7 phone: ", randomdata.PhoneNumber())
 
 	for {
 
