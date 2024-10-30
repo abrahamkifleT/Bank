@@ -35,6 +35,7 @@ func main() {
 		fmt.Println("ERROR")
 		fmt.Println(err)
 		fmt.Println("--------")
+		panic("can't continue, sorry.")
 	}
 
 	for {
